@@ -1,0 +1,16 @@
+/**head.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatarclass{
+  width: 270rpx;
+  height: 270rpx;
+  margin: 50rpx;
+  border-radius: 50%;
+}
+.usermotto {
+  margin-top: 100px;
+ 
+}

@@ -1,0 +1,159 @@
+<view class="app" hidden="{{page_hidden}}">
+<template name="zcFormVessel1">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel1"
+        data-fieldinfo="{{data.field_info}}">
+    <template name="zcInputEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element input-ele js-form-ele must" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element input-ele js-form-ele" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcInputEle" data="{{data:data.content[0]}}"></template>
+</view>
+<template name="zcInputEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element input-ele js-form-ele must" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element input-ele js-form-ele" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcInputEle" data="{{data:data.content[1]}}"></template>
+</view>
+<template name="zcTextareaEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element textarea-ele js-form-ele must" style="{{data.style}}">
+      <textarea placeholder="{{!!data.customFeature.placeholder ? data.customFeature.placeholder: ''}}"
+              data-segment="{{data.customFeature.segment}}"
+              data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+              maxlength="-1"
+              bindinput="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element textarea-ele js-form-ele" style="{{data.style}}">
+      <textarea placeholder="{{!!data.customFeature.placeholder ? data.customFeature.placeholder: ''}}"
+              data-segment="{{data.customFeature.segment}}"
+              data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+              maxlength="-1"
+              bindinput="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcTextareaEle" data="{{data:data.content[2], detail_data: detail_data}}"></template>
+</view>
+<wxs module="buttonWxsModule">
+var isArray = function(array) {
+  return array instanceof Array;
+}
+module.exports.isArray = isArray;
+</wxs>
+<import src="../../components/wxParse/wxParse.wxml"/>
+  <template name="zcButton">
+    <block wx:if="{{real_value}}">
+      <block wx:if="{{buttonWxsModule.isArray(real_value)}}">
+        <block wx:if="{{data.customFeature.action == 'share'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+            <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData: real_value}}"/>
+            </view>
+          </button>
+        </block>
+        <block wx:elif="{{data.customFeature.action == 'contact'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+            <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData: real_value}}"/>
+            </view>
+          </button>
+        </block>
+        <block wx:else>
+          <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+            <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData: real_value}}"/>
+            </view>
+          </label>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:if="{{data.customFeature.action == 'share'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+            {{real_value}}
+          </button>
+        </block>
+        <block wx:elif="{{data.customFeature.action == 'contact'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+            {{data.content}}
+          </button>
+        </block>
+        <block wx:else>
+          <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+            {{real_value}}
+          </label>
+        </block>
+      </block>
+    </block>
+    <block wx:else>
+      <block wx:if="{{data.customFeature.action == 'share' }}">
+        <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+          {{data.content}}
+        </button>
+      </block>
+      <block wx:elif="{{data.customFeature.action == 'contact'}}">
+        <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+          {{data.content}}
+        </button>
+      </block>
+      <block wx:else>
+        <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+          {{data.content}}
+        </label>
+      </block>
+    </block>
+  </template>
+<block wx:if="{{real_value}}">
+  <template is="zcButton" data="{{data:data.content[3], real_value:real_value.form_data.submit-btn}}"></template>
+</block>
+<block wx:elif="{{ detail_data.submit-btn && in_dynamic_vessel !== 'true' }}">
+  <template is="zcButton" data="{{data:data.content[3], real_value:detail_data.submit-btn}}"></template>
+</block>
+<block wx:elif="{{ in_dynamic_vessel === 'true' }}">
+  <template is="zcButton" data="{{data:data.content[3], real_value:item.form_data.submit-btn}}"></template>
+</block>
+<block wx:else>
+  <template is="zcButton" data="{{data:data.content[3], real_value:item.form_data.submit-btn}}"></template>
+</block>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel1" data="{{data:form_vessel1}}"></template>
+</view>
+
+</view>

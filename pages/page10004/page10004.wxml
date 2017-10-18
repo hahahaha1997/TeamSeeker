@@ -1,0 +1,514 @@
+<view class="app" hidden="{{page_hidden}}">
+<template name="zcFormVessel1">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel1"
+        data-fieldinfo="{{data.field_info}}">
+    <template name="zcInputEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element input-ele js-form-ele must" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element input-ele js-form-ele" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcInputEle" data="{{data:data.content[0]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel1" data="{{data:form_vessel1}}"></template>
+</view>
+<template name="zcFormVessel2">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel2"
+        data-fieldinfo="{{data.field_info}}">
+    <template name="zcInputEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element input-ele js-form-ele must" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element input-ele js-form-ele" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcInputEle" data="{{data:data.content[0]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel2" data="{{data:form_vessel2}}"></template>
+</view>
+<template name="zcFormVessel3">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel3"
+        data-fieldinfo="{{data.field_info}}">
+    <template name="zcInputEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element input-ele js-form-ele must" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element input-ele js-form-ele" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcInputEle" data="{{data:data.content[0]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel3" data="{{data:form_vessel3}}"></template>
+</view>
+<template name="zcFormVessel4">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel4"
+        data-fieldinfo="{{data.field_info}}">
+    <template name="zcInputEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element input-ele js-form-ele must" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element input-ele js-form-ele" style="{{data.style}}">
+      <input type="text" placeholder="{{!!data.customFeature.placeholder? data.customFeature.placeholder: ''}}"
+             data-segment="{{data.customFeature.segment}}"
+             data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}"
+             bindchange="inputChange"/>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcInputEle" data="{{data:data.content[0]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel4" data="{{data:form_vessel4}}"></template>
+</view>
+<template name="zcFormVessel5">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel5"
+        data-fieldinfo="{{data.field_info}}">
+    <wxs module="textWxsModule">
+var isArray = function(array) {
+  return array instanceof Array;
+}
+module.exports.isArray = isArray;
+</wxs>
+<import src="../../components/wxParse/wxParse.wxml"/>
+<template name="zcText">
+  <block wx:if="{{real_value}}">
+    <block wx:if="{{textWxsModule.isArray(real_value)}}">
+      <view class="element text" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+        <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData: real_value}}"/>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <text class="element text" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">{{real_value}}</text>
+    </block>
+  </block>
+  <block wx:else>
+    <text class="element text" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">{{data.content}}</text>
+  </block>
+</template>
+<view class="ele-container">
+  <block wx:if="{{real_value}}">
+    <template is="zcText" data="{{data:data.content[0], detail_data: detail_data}}"></template>
+  </block>
+  <block wx:elif="{{detail_data && in_dynamic_vessel !== 'true'}}">
+    <template is="zcText" data="{{data:data.content[0], detail_data: detail_data}}"></template>
+  </block>
+  <block wx:elif="{{in_dynamic_vessel === 'true'}}">
+    <template is="zcText" data="{{data:data.content[0], detail_data: detail_data}}"></template>
+  </block>
+  <block wx:else>
+    <template is="zcText" data="{{data:data.content[0], detail_data: detail_data}}"></template>
+  </block>
+</view>
+
+<template name="zcTimeEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element xcx-time-ele must" style="{{data.style}}">
+      <picker mode="date" bindchange="bindDateChange"
+              data-segment="{{data.customFeature.segment}}"
+              data-formcompid="{{data.formCompid}}"
+              data-compid="{{data.compId}}"
+              data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}" style="{{data.customFeature.ifAllDay?'width:100%':''}}">
+        <label class="date-btn">{{data.date? data.date: "请选择日期"}}</label>
+      </picker>
+      <picker wx:if="{{!data.customFeature.ifAllDay}}" mode="time" bindchange="bindTimeChange"
+              data-segment="{{data.customFeature.segment}}"
+              data-formcompid="{{data.formCompid}}"
+              data-compid="{{data.compId}}"
+              data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}">
+        <label class="time-btn">{{data.time? data.time: "请选择时间"}}</label>
+      </picker>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element xcx-time-ele" style="{{data.style}}">
+      <picker mode="date" bindchange="bindDateChange"
+              data-segment="{{data.customFeature.segment}}"
+              data-formcompid="{{data.formCompid}}"
+              data-compid="{{data.compId}}"
+              data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}" style="{{data.customFeature.ifAllDay?'width:100%':''}}">
+        <label class="date-btn">{{data.date? data.date: "请选择日期"}}</label>
+      </picker>
+      <picker wx:if="{{!data.customFeature.ifAllDay}}" mode="time" bindchange="bindTimeChange"
+              data-segment="{{data.customFeature.segment}}"
+              data-formcompid="{{data.formCompid}}"
+              data-compid="{{data.compId}}"
+              data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}">
+        <label class="time-btn">{{data.time? data.time: "请选择时间"}}</label>
+      </picker>
+    </view>
+  </block>
+
+</template>
+<view class="ele-container">
+  <template is="zcTimeEle" data="{{data:data.content[1]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel5" data="{{data:form_vessel5}}"></template>
+</view>
+<template name="zcFormVessel6">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel6"
+        data-fieldinfo="{{data.field_info}}">
+    <template name="zcSelectEle">
+  <block wx:if="{{data.segment_required}}">
+    <view class="element select-ele js-form-ele must" style="{{data.style}}">
+      <view class="select-container">
+        <label class="title-container" style='{{data.titleStyle}}'><text class="title">{{data.content.title}}</text></label>
+        <checkbox-group class="checkbox-group" wx:if="{{data.customFeature.selectAmount > 1}}" bindchange="bindSelectChange"
+                        data-segment="{{data.customFeature.segment}}"
+                        data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}">
+          <view class="select-item" wx:for="{{data.content.lists}}" wx:key="">
+            <label class="select-content checkbox"><label class="select-text">{{item}}</label>
+              <checkbox class="select-input" value="{{item}}"/>
+            </label>
+          </view>
+        </checkbox-group>
+        <radio-group class="radio-group" bindchange="bindSelectChange" wx:else
+                     data-segment="{{data.customFeature.segment}}"
+                     data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}">
+          <view class="select-item" wx:for="{{data.content.lists}}" wx:key="">
+            <label class="select-content checkbox"><label class="select-text">{{item}}</label>
+              <radio class="select-input" value="{{item}}"/>
+            </label>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="element select-ele js-form-ele" style="{{data.style}}">
+      <view class="select-container">
+        <label class="title-container" style='{{data.titleStyle}}'><text class="title">{{data.content.title}}</text></label>
+        <checkbox-group class="checkbox-group" wx:if="{{data.customFeature.selectAmount > 1}}" bindchange="bindSelectChange"
+                        data-segment="{{data.customFeature.segment}}"
+                        data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}">
+          <view class="select-item" wx:for="{{data.content.lists}}" wx:key="">
+            <label class="select-content checkbox"><label class="select-text">{{item}}</label>
+              <checkbox class="select-input" value="{{item}}"/>
+            </label>
+          </view>
+        </checkbox-group>
+        <radio-group class="radio-group" bindchange="bindSelectChange" wx:else
+                     data-segment="{{data.customFeature.segment}}"
+                     data-datakey="{{data.formCompid}}.form_data.{{data.customFeature.segment}}">
+          <view class="select-item" wx:for="{{data.content.lists}}" wx:key="">
+            <label class="select-content checkbox"><label class="select-text">{{item}}</label>
+              <radio class="select-input" value="{{item}}"/>
+            </label>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+  </block>
+</template>
+<view class="ele-container">
+  <template is="zcSelectEle" data="{{data:data.content[0]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel6" data="{{data:form_vessel6}}"></template>
+</view>
+<template name="zcBbs">
+  <view class="element bbs {{ data.customFeature.mode === 1 ? 'bbs-mode1' : '' }}" data-type="bbs" style="{{data.style}}">
+    <view wx:if="{{ data.customFeature.mode !== 1 }}" class="comment-amount-p">
+      <text class="ca-span ico-moon icon-bubble" style="color: {{data.customFeature.themeColor}};"><text class="ca-span-num">{{ content.count || 0 }}</text></text>条评论
+    </view>
+    <view class="comment-box">
+      <view class="input-wrap">
+        <input placeholder="我也来说几句..." bindinput="bbsInputComment" value="{{ data.compId.comment.text }}" data-compid="{{ data.compId }}"></input>
+      </view>
+      <view class="comment-operate-wrap">
+        <text class="comment-btn" catchtap="bbsPublishComment" data-compid="{{ data.compId }}" wx:if="{{data.customFeature.mode === 1}}">发布</text>
+        <text class="comment-btn" catchtap="bbsPublishComment" data-compid="{{ data.compId }}" wx:if="{{data.customFeature.mode !== 1}}" style="background-color: {{data.customFeature.themeColor}};">发布</text>
+        <view class="upload-wrap ico-moon icon-pic" catchtap="uploadBbsCommentImage" data-compid="{{ data.compId }}">
+          <image hidden="{{ !data.comment.img }}" src="{{ data.comment.img }}" mode="aspectFit"></image>
+          <label class="delete-img icon-moon icon-delete" hidden="{{ !data.comment.img }}" catchtap="deleteCommentImage" data-compid="{{ data.compId }}"></label>
+        </view>
+        <text class="upload-text" wx:if="{{ data.customFeature.mode !== 1 }}" catchtap="uploadBbsCommentImage" data-compid="{{ data.compId }}">添加图片</text>
+      </view>
+    </view>
+    <view class="lately-comment-p" wx:if="{{ data.customFeature.mode === 1 }}"><label style="background-color: {{data.customFeature.themeColor}};"></label>最近评论{{data.customFeature.mode === 1 ? '（' + (content.count || 0) + '）' : ''}}</view>
+    <block wx:if="{{ content.count == 0 }}">
+      <view class="empty-tip">
+        <image src="http://testfe.zhichiwangluo.com/static/webapp/images/none.png" mode="aspectFill" alt=""></image>
+        <text>快来抢沙发</text>
+      </view>
+    </block>
+    <block else>
+      <scroll-view class="comment-container js-list-container" scroll-y="true">
+        <view wx:for="{{ content.data }}" wx:key="">
+          <view class="comment">
+            <view>
+              <image class="cover-img" src="{{ item.form_data.cover_thumb }}"></image>
+              <view class="nickname-wrap">
+                <label class="nickname">{{ item.form_data.nickname }}</label>
+                <label class="add-time">{{ item.form_data.content.addTime }}</label>
+              </view>
+              <label wx:if="{{ data.customFeature.ifLike }}" class="bbs-content-btn ico-moon icon-heart {{ item.has_count == 1 ? 'active': '' }}" data-objrel="bbs_{{ item.form_data.id }}" data-counted="{{item.has_count}}" catchtap="changeCount" data-compid="{{ data.compId }}" data-parentcompid="{{ data.compId }}" data-index="{{ index }}">{{ item.count_num }}</label>
+              <label class="bbs-content-btn ico-moon icon-reply comment-reply-btn" catchtap="clickBbsReplyBtn" data-compid="{{ data.compId }}" data-index="{{ index }}">回复</label>
+            </view>
+            <view class="comment-content">
+              <view class="comment-reference-text" wx:if="{{ item.form_data.content.reply }}">@{{ item.form_data.content.reply.nickname }}</view>
+              <view>{{ item.form_data.content.text }}</view>
+              <image class="comment-img" wx:if="{{ item.form_data.content.img }}" src="{{ item.form_data.content.img }}" mode="aspectFit" data-src="{{item.form_data.content.img}}" catchtap="previewImage"></image>
+            </view>
+          </view>
+          <view class="comment-box reply-comment-box" hidden="{{ !item.showReply }}">
+            <view class="input-wrap">
+              <input placeholder="回复 {{ item.form_data.nickname }}" bindinput="bbsInputReply" value="{{ item.replyText }}" data-compid="{{ data.compId }}" data-index="{{ index }}"></input>
+            </view>
+            <view class="comment-operate-wrap" >
+              <text class="comment-btn" catchtap="bbsPublishReply" data-compid="{{ data.compId }}" data-index="{{ index }}" wx:if="{{data.customFeature.mode === 1}}">发布</text>
+              <text class="comment-btn" catchtap="bbsPublishReply" data-compid="{{ data.compId }}" data-index="{{ index }}" wx:if="{{data.customFeature.mode !== 1}}" style="background-color: {{data.customFeature.themeColor}};">发布</text>
+              <view class="upload-wrap ico-moon icon-pic" catchtap="uploadBbsReplyImage" data-compid="{{ data.compId }}" data-index="{{ index }}">
+                <image hidden="{{ !item.replyImg }}" src="{{ item.replyImg }}" mode="aspectFit"></image>
+                <label class="delete-img  icon-moon icon-delete" hidden="{{ !item.replyImg }}" catchtap="deleteReplyImage" data-compid="{{ data.compId }}" data-index="{{ index }}"></label>
+              </view>
+              <text class="upload-text" wx:if="{{ data.customFeature.mode !== 1 }}" catchtap="uploadBbsReplyImage" data-compid="{{ data.compId }}" data-index="{{ index }}">添加图片</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+  </view>
+</template>
+<view class="ele-container">
+  <template is="zcBbs" data="{{ data:bbs7, content:bbs7.content }}"></template>
+</view><wxs module="textWxsModule">
+var isArray = function(array) {
+  return array instanceof Array;
+}
+module.exports.isArray = isArray;
+</wxs>
+<import src="../../components/wxParse/wxParse.wxml"/>
+<template name="zcText">
+  <block wx:if="{{real_value}}">
+    <block wx:if="{{textWxsModule.isArray(real_value)}}">
+      <view class="element text" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+        <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData: real_value}}"/>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <text class="element text" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">{{real_value}}</text>
+    </block>
+  </block>
+  <block wx:else>
+    <text class="element text" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">{{data.content}}</text>
+  </block>
+</template>
+<view class="ele-container">
+  <block wx:if="{{real_value}}">
+    <template is="zcText" data="{{data:text8, detail_data: detail_data}}"></template>
+  </block>
+  <block wx:elif="{{detail_data && in_dynamic_vessel !== 'true'}}">
+    <template is="zcText" data="{{data:text8, detail_data: detail_data}}"></template>
+  </block>
+  <block wx:elif="{{in_dynamic_vessel === 'true'}}">
+    <template is="zcText" data="{{data:text8, detail_data: detail_data}}"></template>
+  </block>
+  <block wx:else>
+    <template is="zcText" data="{{data:text8, detail_data: detail_data}}"></template>
+  </block>
+</view>
+
+<template name="zcFormVessel9">
+  <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
+        bindsubmit="submitForm"
+        data-compid="form_vessel9"
+        data-fieldinfo="{{data.field_info}}">
+    <wxs module="buttonWxsModule">
+var isArray = function(array) {
+  return array instanceof Array;
+}
+module.exports.isArray = isArray;
+</wxs>
+<import src="../../components/wxParse/wxParse.wxml"/>
+  <template name="zcButton">
+    <block wx:if="{{real_value}}">
+      <block wx:if="{{buttonWxsModule.isArray(real_value)}}">
+        <block wx:if="{{data.customFeature.action == 'share'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+            <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData: real_value}}"/>
+            </view>
+          </button>
+        </block>
+        <block wx:elif="{{data.customFeature.action == 'contact'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+            <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData: real_value}}"/>
+            </view>
+          </button>
+        </block>
+        <block wx:else>
+          <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+            <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData: real_value}}"/>
+            </view>
+          </label>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:if="{{data.customFeature.action == 'share'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+            {{real_value}}
+          </button>
+        </block>
+        <block wx:elif="{{data.customFeature.action == 'contact'}}">
+          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+            {{data.content}}
+          </button>
+        </block>
+        <block wx:else>
+          <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+            {{real_value}}
+          </label>
+        </block>
+      </block>
+    </block>
+    <block wx:else>
+      <block wx:if="{{data.customFeature.action == 'share' }}">
+        <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+          {{data.content}}
+        </button>
+      </block>
+      <block wx:elif="{{data.customFeature.action == 'contact'}}">
+        <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+          {{data.content}}
+        </button>
+      </block>
+      <block wx:else>
+        <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+          {{data.content}}
+        </label>
+      </block>
+    </block>
+  </template>
+<block wx:if="{{real_value}}">
+  <template is="zcButton" data="{{data:data.content[0]}}"></template>
+</block>
+<block wx:elif="{{ detail_data && in_dynamic_vessel !== 'true' }}">
+  <template is="zcButton" data="{{data:data.content[0]}}"></template>
+</block>
+<block wx:elif="{{ in_dynamic_vessel === 'true' }}">
+  <template is="zcButton" data="{{data:data.content[0]}}"></template>
+</block>
+<block wx:else>
+  <template is="zcButton" data="{{data:data.content[0]}}"></template>
+</block>
+<wxs module="textWxsModule">
+var isArray = function(array) {
+  return array instanceof Array;
+}
+module.exports.isArray = isArray;
+</wxs>
+<view class="ele-container">
+  <block wx:if="{{real_value}}">
+    <template is="zcText" data="{{data:data.content[1], detail_data: detail_data}}"></template>
+  </block>
+  <block wx:elif="{{detail_data && in_dynamic_vessel !== 'true'}}">
+    <template is="zcText" data="{{data:data.content[1], detail_data: detail_data}}"></template>
+  </block>
+  <block wx:elif="{{in_dynamic_vessel === 'true'}}">
+    <template is="zcText" data="{{data:data.content[1], detail_data: detail_data}}"></template>
+  </block>
+  <block wx:else>
+    <template is="zcText" data="{{data:data.content[1], detail_data: detail_data}}"></template>
+  </block>
+</view>
+
+<template name="zcFormButton">
+  <button class="button background-ele" style="{{data.style}}" form-type="submit">
+    {{data.content}}
+  </button>
+</template>
+<view class="ele-container">
+  <template is="zcFormButton" data="{{data:data.content[2]}}"></template>
+</view>
+
+  </form>
+</template>
+<view class="ele-container">
+  <template is="zcFormVessel9" data="{{data:form_vessel9}}"></template>
+</view>
+
+</view>

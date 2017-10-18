@@ -1,0 +1,52 @@
+<view class="app" hidden="{{page_hidden}}">
+<template name="zcSearch1">
+  <view class="element search {{data.customFeature.ifLocation?'another-style':''}}" style="{{data.style}}">
+    <view class="ico-moon icon-location location {{data.customFeature.ifLocation?'':'hide'}}" data-param="{{data.customFeature.ifLocation}}" catchtap="turnToSearchPage">全国</view>
+    <view class="search-input">
+       <icon size="14" type="search"></icon>
+       <view bindtap="turnToSearchPage" data-form="{{data.customFeature.searchObject.customFeature.form}}" class="fakeSearch {{data.customFeature.searchObject.type=='goods-list'?'':'hide'}}" >{{data.content.placeholder}}</view>
+       <input data-compid="search1" class="{{data.customFeature.searchObject.customFeature.form=='goods'?'hide':''}}" bindinput="bindSearchTextChange" name="input" placeholder="{{data.content.placeholder}}" confirm-type="search"/>
+       <view data-compid="search1"
+             data-listid="{{data.customFeature.searchObject.customFeature.id}}"
+             data-listtype="{{data.customFeature.searchObject.type}}"
+             data-form="{{data.customFeature.searchObject.customFeature.form}}"
+            class="search-btn" bindtap="searchList">搜索</view>
+    </view>
+  </view>
+</template>
+<view class="ele-container">
+  <template is="zcSearch1" data="{{data:search1}}"></template>
+</view><template name="zcCarousel">
+  <swiper indicator-dots="true" circular="true" autoplay="{{data.customFeature.autoplay}}" vertical="{{data.customFeature.vertical}}" interval="{{data.customFeature.interval*1000}}" duration="750" style="{{data.style}}">
+    <block wx:for="{{data.content}}" wx:key="">
+      <swiper-item data-event-params="{{item.eventParams}}" catchtap="{{item.eventHandler}}">
+        <image class="swiper-item" src="{{item.pic}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</template>
+<view class="ele-container">
+  <template is="zcCarousel" data="{{data:carousel2}}"></template>
+</view><template name="zcList">
+  <view class="element list" style="{{data.style}}">
+      <view class="list-container {{data.customFeature.sec_mode}}">
+        <block wx:for="{{data.content}}" wx:key="">
+          <view class="list-item background-ele" style="{{item.listStyle}}" data-event-params="{{item.eventParams}}" catchtap="{{item.eventHandler}}">
+            <image class="list-img" src="{{item.pic}}" style="{{item.imgStyle}}"></image>
+            <view class="title-container" style="{{item.titleWidth}}">
+              <view class="title">{{item.title}}</view>
+              <view class="sec-title" style="{{item.secTitleStyle}}">{{item.secTitle}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+  </view>
+</template>
+<view class="ele-container">
+  <template is="zcList" data="{{data:list3, detail_data: detail_data}}"></template>
+</view>
+
+<view style="height:20px;width:100%;overflow:hidden;margin-top:10px;">
+  <image style="width:80%;height:35px;margin:-15px 10% 0 10%;" src="http://cdn.jisuapp.cn/zhichi_frontend/static/webapp/images/tec-support.png"></image>
+</view>
+</view>
