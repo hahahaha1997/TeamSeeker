@@ -1,24 +1,72 @@
-var app      = getApp();
+var app = getApp();
 
 var pageData = {
   data: {
+    //搜索栏样式
     "search1":{
       "type":"search",
-      "style":"margin-top:0;height:117.1875rpx;width:750rpx;background-color:#efeff4;margin-left:auto;",
+      "style":"margin-top:0;height:117.1875rpx;width:750rpx;background-color:#efeff4；margin-left:auto;",
       "content":{
-        "placeholder":"\u8bf7\u8f93\u5165\u641c\u7d22\u5185\u5bb9"},
-        "customFeature":{
+        "placeholder":"请输入搜索内容"
+        },
+      "customFeature":{
           "hasQuickTags":true,
           "ifLocation":false,
           "quickTags":[],
-          "searchObject":""},
+          "searchObject":""
+        },
           "animations":[],
           "page_form":"",
           "compId":"search1",
           "parentCompid":"search1"},
-          "carousel2":{"type":"carousel",
-          "style":"height:351.5625rpx;margin-left:auto;margin-right:auto;margin-top:0;opacity:1;",
-          "content":[{"customFeature":[],"pic":"http:\/\/cdn.jisuapp.cn\/zhichi_frontend\/static\/webapp\/images\/default.png","content":"","parentCompid":"carousel2","style":""},{"customFeature":[],"pic":"http:\/\/cdn.jisuapp.cn\/zhichi_frontend\/static\/webapp\/images\/default.png","content":"","parentCompid":"carousel2","style":""}],"customFeature":{"autoplay":true,"interval":2,"carouselgroupId":null},"animations":[],"page_form":"","compId":"carousel2"},"list3":{"type":"list","style":"background-color:rgba(0, 0, 0, 0);color:rgb(34, 34, 34);font-size:37.5rpx;opacity:1;text-align:left;margin-left:auto;","content":[{"customFeature":[],"title":"\u6807\u9898","secTitle":"\u6211\u662f\u7b80\u4ecb","pic":"http:\/\/cdn.jisuapp.cn\/zhichi_frontend\/static\/webapp\/images\/default.png","content":"","listStyle":"margin-bottom:2.34375rpx;background-color:rgb(232, 232, 232);height:140.625rpx;margin-left:auto;","imgStyle":"width:140.625rpx;height:140.625rpx;margin-left:auto;","secTitleStyle":"color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;","titleWidth":"width:585.9375rpx;margin-left:auto;","parentCompid":"list3","style":""},{"customFeature":[],"title":"\u6807\u9898","secTitle":"\u6211\u662f\u7b80\u4ecb","pic":"http:\/\/cdn.jisuapp.cn\/zhichi_frontend\/static\/webapp\/images\/default.png","content":"","listStyle":"margin-bottom:2.34375rpx;background-color:rgb(232, 232, 232);height:140.625rpx;margin-left:auto;","imgStyle":"width:140.625rpx;height:140.625rpx;margin-left:auto;","secTitleStyle":"color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;","titleWidth":"width:585.9375rpx;margin-left:auto;","parentCompid":"list3","style":""},{"customFeature":[],"title":"\u6807\u9898","secTitle":"\u6211\u662f\u7b80\u4ecb","pic":"http:\/\/cdn.jisuapp.cn\/zhichi_frontend\/static\/webapp\/images\/default.png","content":"","listStyle":"margin-bottom:2.34375rpx;background-color:rgb(232, 232, 232);height:140.625rpx;margin-left:auto;","imgStyle":"width:140.625rpx;height:140.625rpx;margin-left:auto;","secTitleStyle":"color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;","titleWidth":"width:585.9375rpx;margin-left:auto;","parentCompid":"list3","style":""}],"customFeature":{"imgHeight":60,"imgWidth":60,"lineBackgroundColor":"rgb(232, 232, 232)","lineBackgroundImage":"","lineHeight":60,"margin":1,"mode":0,"secColor":"rgb(102, 102, 102)","secFontSize":"12px","secFontStyle":"","secFontWeight":"","secTextAlign":"left","secTextDecoration":""},"animations":[],"page_form":"","compId":"list3","itemType":"list","itemParentType":null,"itemIndex":"list3"},"has_tabbar":1,"page_hidden":true,"page_form":""},
+
+          //滑块的样式
+          "carousel2":{
+          "type":"carousel",
+          "style":"height:375rpx; margin-left:auto; margin-top:0;opacity:1;",
+          "content":[
+            {
+"customFeature":[],
+              "pic":"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1403498584,3314930339&fm=27&gp=0.jpg","content":"",
+"parentCompid":"carousel2",
+"style":""
+            },
+            {
+"customFeature":[],
+              "pic":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508341664792&di=6fccd9f0adf137954ad6a419b730a207&imgtype=0&src=http%3A%2F%2Fpic23.nipic.com%2F20120817%2F10745481_102028343000_2.jpg","content":"",
+"parentCompid":"carousel2",
+"style":""
+            }],
+            "customFeature":{
+              "autoplay":true,
+              "interval":2,
+              "carouselgroupId":null
+              },
+              "animations":[],
+              "page_form":"",
+              "compId":"carousel2"
+            },
+
+            //标题的样式
+              "list3":{
+              "type":"list",
+              "style":"background-color:#e8f5e9;#66bb6a;color:rgb(34, 34, 34);font-size:37.5rpx;opacity:1;text-align:left;margin-left:auto;",
+
+              "content":[
+{"customFeature":[],"title":"\u6807\u9898", "secTitle":"内容简介",
+ "pic": "/images/比赛.png", "content": "", "listStyle":"margin-bottom:2.34375rpx;background-color:rgb(255, 255, 255);height:140.625rpx;margin-left:auto;","imgStyle":"width:120rpx;height:120rpx;margin-left:auto;","secTitleStyle":"color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;","titleWidth":"width:585.9375rpx;margin-left:auto;","parentCompid":"list3","style":""},
+
+{"customFeature": [], "title": "\u6807\u9898", "secTitle": "内容简介",
+  "pic": "/images/比赛.png", "content": "", "listStyle": "margin-bottom:2.34375rpx;background-color:rgb(255, 255, 255);height:140.625rpx;margin-left:auto;", "imgStyle": "width:120rpx;height:120rpx;margin-left:auto;", "secTitleStyle": "color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;", "titleWidth": "width:585.9375rpx;margin-left:auto;", "parentCompid": "list3", "style": ""
+},
+
+ {"customFeature":[],"title":"\u6807\u9898","secTitle":"内容简介",            
+"pic": "/images/项目.png", "content": "", "listStyle": "margin-bottom:2.34375rpx;background-color:rgb(255, 255, 255);height:140.625rpx;margin-left:auto;margin-boder:#000000", "imgStyle": "width:120rpx;height:120rpx;margin-left:auto;", "secTitleStyle": "color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;", "titleWidth": "width:585.9375rpx;margin-left:auto;", "parentCompid": "list3", "style": ""},
+ 
+ {"customFeature": [], "title": "\u6807\u9898", "secTitle":"内容简介",
+"pic":"/images/项目.png","content":"","listStyle":"margin-bottom:2.34375rpx;background-color:rgb(255, 255, 255);height:140.625rpx;margin-left:auto;","imgStyle":"width:120rpx;height:120rpx;margin-left:auto;","secTitleStyle":"color:rgb(102, 102, 102);font-size:28.125rpx;text-align:left;margin-left:auto;","titleWidth":"width:585.9375rpx;margin-left:auto;","parentCompid":"list3","style":""}],
+
+"customFeature":{"imgHeight":60,"imgWidth":60,"lineBackgroundColor":"rgb(232, 232, 232)","lineBackgroundImage":"","lineHeight":60,"margin":1,"mode":0,"secColor":"rgb(102, 102, 102)","secFontSize":"12px","secFontStyle":"","secFontWeight":"","secTextAlign":"left","secTextDecoration":""},"animations":[],"page_form":"","compId":"list3","itemType":"list","itemParentType":null,"itemIndex":"list3"},"has_tabbar":1,"page_hidden":true,"page_form":""},
     need_login: false,
     page_router: 'page10000',
     page_form: 'none',

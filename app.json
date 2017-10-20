@@ -1,48 +1,52 @@
 {
   "pages": [
-    
     "pages/index/index",
-    "pages/PersonalCenter/PersonalCenter",
     "pages/page10002/page10002",
     "pages/page10003/page10003",
     "pages/page10004/page10004",
     "pages/page10005/page10005",
     "pages/page10006/page10006",
     "pages/page10007/page10007",
+    "pages/PersonalCenter/PersonalCenter",
     "pages/bindCellphone/bindCellphone",
     "pages/advanceSearch/advanceSearch",
     "pages/extensionPage/extensionPage",
     "pages/transferPage/transferPage",
-    "pages/transferOrderDetail/transferOrderDetail",                                                "pages/transferPaySuccess/transferPaySuccess"],
+    "pages/transferOrderDetail/transferOrderDetail"
+    ],                                          
+  
   "window": {
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "TeamSeeker"
   },
+
   "tabBar": {
     "borderStyle":"white",
     "color":"#000000",
     "selectedColor":"#000000",
     "backgroundColor":"#FFF",
     "list":[{
-      "iconPath":"images/59e1d979889eb.png",
-      "selectedIconPath":"images/59e1d97988a3e.png",
+      "iconPath":"images/index_0.png",
+      "selectedIconPath":"images/index_1.png",
       "text":"首页",
       "pagePath":"pages/index/index"},
       {
-        "iconPath":"images/59e1d979889eb.png",
-        "selectedIconPath":"images/59e1d97988a3e.png",
+        "iconPath":"images/push_0.png",
+        "selectedIconPath":"images/push_1.png",
         "text":"发布",
         "pagePath":"pages/page10007/page10007"},
       {
-        "iconPath":"images/59e1d979a6a6f.png",
-        "selectedIconPath":"images/59e1d979a6ac8.png",
+        "iconPath":"images/user_0.png",
+        "selectedIconPath":"images/user_1.png",
         "text":"个人中心",
         "pagePath":"pages/PersonalCenter/PersonalCenter"}
     ]},
+
     "networkTimeout": {
     "request": 10000,
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "debug": false
+  "debug": true
 }

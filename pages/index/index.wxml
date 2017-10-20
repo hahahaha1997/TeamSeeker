@@ -1,4 +1,5 @@
 <view class="app" hidden="{{page_hidden}}">
+
 <template name="zcSearch1">
   <view class="element search {{data.customFeature.ifLocation?'another-style':''}}" style="{{data.style}}">
     <view class="ico-moon icon-location location {{data.customFeature.ifLocation?'':'hide'}}" data-param="{{data.customFeature.ifLocation}}" catchtap="turnToSearchPage">全国</view>
@@ -14,6 +15,7 @@
     </view>
   </view>
 </template>
+
 <view class="ele-container">
   <template is="zcSearch1" data="{{data:search1}}"></template>
 </view><template name="zcCarousel">
@@ -25,6 +27,7 @@
     </block>
   </swiper>
 </template>
+
 <view class="ele-container">
   <template is="zcCarousel" data="{{data:carousel2}}"></template>
 </view><template name="zcList">
@@ -46,7 +49,4 @@
   <template is="zcList" data="{{data:list3, detail_data: detail_data}}"></template>
 </view>
 
-<view style="height:20px;width:100%;overflow:hidden;margin-top:10px;">
-  <image style="width:80%;height:35px;margin:-15px 10% 0 10%;" src="http://cdn.jisuapp.cn/zhichi_frontend/static/webapp/images/tec-support.png"></image>
-</view>
 </view>
