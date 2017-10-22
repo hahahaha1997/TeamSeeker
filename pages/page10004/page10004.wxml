@@ -25,7 +25,6 @@
 <view class="ele-container">
   <template is="zcInputEle" data="{{data:data.content[0]}}"></template>
 </view>
-
   </form>
 </template>
 <view class="ele-container">
@@ -281,35 +280,34 @@ module.exports.isArray = isArray;
 </view>
 
   </form>
-</template>
+ </template> 
 <view class="ele-container">
   <template is="zcFormVessel6" data="{{data:form_vessel6}}"></template>
 </view>
 <template name="zcBbs">
   <view class="element bbs {{ data.customFeature.mode === 1 ? 'bbs-mode1' : '' }}" data-type="bbs" style="{{data.style}}">
-    <view wx:if="{{ data.customFeature.mode !== 1 }}" class="comment-amount-p">
-      <text class="ca-span ico-moon icon-bubble" style="color: {{data.customFeature.themeColor}};"><text class="ca-span-num">{{ content.count || 0 }}</text></text>条评论
-    </view>
-    <view class="comment-box">
-      <view class="input-wrap">
-        <input placeholder="我也来说几句..." bindinput="bbsInputComment" value="{{ data.compId.comment.text }}" data-compid="{{ data.compId }}"></input>
-      </view>
+     <view wx:if="{{ data.customFeature.mode !== 1 }}" class="comment-amount-p">
+      <!-- <text class="ca-span ico-moon icon-bubble" style="color: {{data.customFeature.themeColor}};"><text class="ca-span-num">{{ content.count || 0 }}</text></text>条评论 -->
+    </view> 
+     <view class="comment-box">
+      <!-- <view class="input-wrap">
+        <textarea auto-height  placeholder="项目/比赛的详细介绍" bindinput="bbsInputComment" value="{{ data.compId.comment.text }}" data-compid="{{ data.compId }}"></textarea>
+      </view> -->
       <view class="comment-operate-wrap">
-        <text class="comment-btn" catchtap="bbsPublishComment" data-compid="{{ data.compId }}" wx:if="{{data.customFeature.mode === 1}}">发布</text>
-        <text class="comment-btn" catchtap="bbsPublishComment" data-compid="{{ data.compId }}" wx:if="{{data.customFeature.mode !== 1}}" style="background-color: {{data.customFeature.themeColor}};">发布</text>
-        <view class="upload-wrap ico-moon icon-pic" catchtap="uploadBbsCommentImage" data-compid="{{ data.compId }}">
+        <!-- <text class="comment-btn" catchtap="bbsPublishComment" data-compid="{{ data.compId }}" wx:if="{{data.customFeature.mode === 1}}">发布</text>
+        <text class="comment-btn" catchtap="bbsPublishComment" data-compid="{{ data.compId }}" wx:if="{{data.customFeature.mode !== 1}}" style="background-color: {{data.customFeature.themeColor}};">发布</text> -->
+        <!-- <view class="upload-wrap ico-moon icon-pic" catchtap="uploadBbsCommentImage" data-compid="{{ data.compId }}">
           <image hidden="{{ !data.comment.img }}" src="{{ data.comment.img }}" mode="aspectFit"></image>
           <label class="delete-img icon-moon icon-delete" hidden="{{ !data.comment.img }}" catchtap="deleteCommentImage" data-compid="{{ data.compId }}"></label>
-        </view>
-        <text class="upload-text" wx:if="{{ data.customFeature.mode !== 1 }}" catchtap="uploadBbsCommentImage" data-compid="{{ data.compId }}">添加图片</text>
+        </view> -->
       </view>
     </view>
     <view class="lately-comment-p" wx:if="{{ data.customFeature.mode === 1 }}"><label style="background-color: {{data.customFeature.themeColor}};"></label>最近评论{{data.customFeature.mode === 1 ? '（' + (content.count || 0) + '）' : ''}}</view>
     <block wx:if="{{ content.count == 0 }}">
-      <view class="empty-tip">
+      <!-- <view class="empty-tip">
         <image src="http://testfe.zhichiwangluo.com/static/webapp/images/none.png" mode="aspectFill" alt=""></image>
         <text>快来抢沙发</text>
-      </view>
+      </view> -->
     </block>
     <block else>
       <scroll-view class="comment-container js-list-container" scroll-y="true">
@@ -388,9 +386,9 @@ module.exports.isArray = isArray;
   <block wx:else>
     <template is="zcText" data="{{data:text8, detail_data: detail_data}}"></template>
   </block>
-</view>
+</view> 
 
-<template name="zcFormVessel9">
+ <template name="zcFormVessel9">
   <form class="element form-vessel" data-form="{{data.form}}" style="{{data.style}}"
         bindsubmit="submitForm"
         data-compid="form_vessel9"
@@ -406,63 +404,63 @@ module.exports.isArray = isArray;
     <block wx:if="{{real_value}}">
       <block wx:if="{{buttonWxsModule.isArray(real_value)}}">
         <block wx:if="{{data.customFeature.action == 'share'}}">
-          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
-            <view class="wxParse">
+          <!-- <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage"> -->
+            <!-- <view class="wxParse">
               <template is="wxParse" data="{{wxParseData: real_value}}"/>
             </view>
-          </button>
+          </button> -->
         </block>
         <block wx:elif="{{data.customFeature.action == 'contact'}}">
-          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+          <!-- <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
             <view class="wxParse">
               <template is="wxParse" data="{{wxParseData: real_value}}"/>
             </view>
-          </button>
+          </button> -->
         </block>
         <block wx:else>
-          <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+          <!-- <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
             <view class="wxParse">
               <template is="wxParse" data="{{wxParseData: real_value}}"/>
             </view>
-          </label>
+          </label> -->
         </block>
       </block>
       <block wx:else>
         <block wx:if="{{data.customFeature.action == 'share'}}">
-          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+          <!-- <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
             {{real_value}}
-          </button>
+          </button> -->
         </block>
         <block wx:elif="{{data.customFeature.action == 'contact'}}">
-          <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+          <!-- <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
             {{data.content}}
-          </button>
+          </button> -->
         </block>
         <block wx:else>
-          <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+          <!-- <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
             {{real_value}}
-          </label>
+          </label> -->
         </block>
       </block>
     </block>
     <block wx:else>
       <block wx:if="{{data.customFeature.action == 'share' }}">
-        <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
+        <!-- <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}" data-desc="{{data.customFeature.desc}}" catchtap="onShareAppMessage">
           {{data.content}}
-        </button>
+        </button> -->
       </block>
       <block wx:elif="{{data.customFeature.action == 'contact'}}">
-        <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
+        <!-- <button class="element button" open-type="{{data.customFeature.action}}" style="{{data.style}}">
           {{data.content}}
-        </button>
+        </button> -->
       </block>
       <block wx:else>
-        <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
+        <!-- <label class="element button" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
           {{data.content}}
-        </label>
+        </label> -->
       </block>
     </block>
-  </template>
+  </template> 
 <block wx:if="{{real_value}}">
   <template is="zcButton" data="{{data:data.content[0]}}"></template>
 </block>
@@ -481,7 +479,7 @@ var isArray = function(array) {
 }
 module.exports.isArray = isArray;
 </wxs>
-<view class="ele-container">
+<!-- <view class="ele-container">
   <block wx:if="{{real_value}}">
     <template is="zcText" data="{{data:data.content[1], detail_data: detail_data}}"></template>
   </block>
@@ -494,7 +492,7 @@ module.exports.isArray = isArray;
   <block wx:else>
     <template is="zcText" data="{{data:data.content[1], detail_data: detail_data}}"></template>
   </block>
-</view>
+</view> -->
 
 <template name="zcFormButton">
   <button class="button background-ele" style="{{data.style}}" form-type="submit">

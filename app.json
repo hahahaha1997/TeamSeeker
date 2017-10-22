@@ -7,6 +7,7 @@
     "pages/page10005/page10005",
     "pages/page10006/page10006",
     "pages/page10007/page10007",
+    "pages/page10008/page10008",
     "pages/PersonalCenter/PersonalCenter",
     "pages/bindCellphone/bindCellphone",
     "pages/advanceSearch/advanceSearch",
@@ -34,7 +35,8 @@
         "iconPath":"images/push_0.png",
         "selectedIconPath":"images/push_1.png",
         "text":"发布",
-        "pagePath":"pages/page10007/page10007"},
+        "pagePath":"pages/page10004/page10004"
+      },
       {
         "iconPath":"images/user_0.png",
         "selectedIconPath":"images/user_1.png",

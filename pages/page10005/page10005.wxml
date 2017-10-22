@@ -105,9 +105,9 @@ module.exports.isArray = isArray;
   </block>
 </view>
 
-<template name="zcBreakline">
+<!-- <template name="zcBreakline">
   <view class="element breakline" style="{{data.style}}"></view>
-</template>
+</template> -->
 <view class="ele-container">
   <template is="zcBreakline" data="{{data:data.content[3]}}"></template>
 </view>
@@ -253,9 +253,9 @@ module.exports.isArray = isArray;
   </block>
 </view>
 
-<template name="zcBreakline">
+<!-- <template name="zcBreakline">
   <view class="element breakline" style="{{data.style}}"></view>
-</template>
+</template> -->
 <view class="ele-container">
   <template is="zcBreakline" data="{{data:data.content[3]}}"></template>
 </view>
@@ -401,9 +401,9 @@ module.exports.isArray = isArray;
   </block>
 </view>
 
-<template name="zcBreakline">
+<!-- <template name="zcBreakline">
   <view class="element breakline" style="{{data.style}}"></view>
-</template>
+</template> -->
 <view class="ele-container">
   <template is="zcBreakline" data="{{data:data.content[3]}}"></template>
 </view>

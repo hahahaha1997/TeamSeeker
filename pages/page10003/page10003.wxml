@@ -15,7 +15,24 @@
   </view>
 </template>
 <view class="ele-container">
+  <template is="zcList" data="{{data:list2, detail_data: detail_data}}"></template>
+</view>
+<template name="zcList">
+  <view class="element list" style="{{data.style}}">
+      <view class="list-container {{data.customFeature.sec_mode}}">
+        <block wx:for="{{data.content}}" wx:key="">
+          <view class="list-item background-ele" style="{{item.listStyle}}" data-event-params="{{item.eventParams}}" catchtap="{{item.eventHandler}}">
+            <image class="list-img" src="{{item.pic}}" style="{{item.imgStyle}}"></image>
+            <view class="title-container" style="{{item.titleWidth}}">
+              <view class="title">{{item.title}}</view>
+              <view class="sec-title" style="{{item.secTitleStyle}}">{{item.secTitle}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+  </view>
+</template>
+<view class="ele-container">
   <template is="zcList" data="{{data:list1, detail_data: detail_data}}"></template>
 </view>
-
 </view>

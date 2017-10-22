@@ -1282,6 +1282,8 @@ a {
   height: 100%;
   vertical-align: middle;
   text-align: center;
+  color: #80cbc4;
+  background-color: #ffffff;
 }
 .select-ele.must .title {
   position: relative;
