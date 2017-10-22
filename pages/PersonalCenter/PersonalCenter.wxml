@@ -1,5 +1,6 @@
 <view class="app" hidden="{{page_hidden}}">
 <import src="../../components/wxParse/wxParse.wxml"/>
+
 <template name="zcFreeVessel1">
   <view class="element free-vessel" style="{{data.style}}" data-event-params="{{data.eventParams}}" catchtap="{{data.eventHandler}}">
     <template name="zcPicture">
@@ -14,7 +15,9 @@
     </view>
   </block>
 </template>
+
 <view class="ele-container">
+  
   <block wx:if="{{real_value}}">
     <template is="zcPicture" data="{{data:data.content[0], detail_data: detail_data}}"></template>
   </block>
@@ -27,6 +30,7 @@
   <block wx:else>
     <template is="zcPicture" data="{{data:data.content[0], detail_data: detail_data}}"></template>
   </block>
+
 </view><template name="zcPicture">
   <block wx:if="{{real_value}}">
     <view class="element picture" style="{{data.style}}" data-event-params="{{data.eventParams}}" data-imgArr="{{real_value}}" catchtap="{{data.eventHandler}}">
@@ -39,6 +43,7 @@
     </view>
   </block>
 </template>
+
 <view class="ele-container">
   <block wx:if="{{real_value}}">
     <template is="zcPicture" data="{{data:data.content[1], detail_data: detail_data}}"></template>
@@ -398,7 +403,4 @@ module.exports.isArray = isArray;
 </block>
 </view>
 
-<view style="height:20px;width:100%;overflow:hidden;margin-top:10px;">
-  <image style="width:80%;height:35px;margin:-15px 10% 0 10%;" src="http://cdn.jisuapp.cn/zhichi_frontend/static/webapp/images/tec-support.png"></image>
-</view>
 </view>
